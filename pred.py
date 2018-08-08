@@ -155,8 +155,8 @@ def createNetwork():
     cities[name] = city
     return city
     
-def learn(city):
-    f = open("database","r")
+def learn(city,filename):
+    f = open(filename,"r")
     s = f.readline()
     data = None
     while(s!=""):

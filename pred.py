@@ -1,16 +1,17 @@
 import random
 maxerror = 0.001
 step = 0.0001
+cities = {} # cities format name:city object
 class Node:
     value = 0
     description = ""
-    cons = {}
+    cons = {}#connections format: node:weight
     def setVal(self,value):
         self.value = value
     def getVal(self):
         return self.value
     def connect(self,nextNode):
-        w = random.random()
+        w = random.random()#setting random weightage
         self.cons[nextNode] = w
         nextNode.cons[self] = w
 class InputNode(Node):
@@ -44,9 +45,9 @@ class Year(InputNode):
         self.value = year/99
 
 class Layer :
-    nodes = []
-    prevNodes = []
-    connections = []
+    nodes = [] # nodes in the current layer
+    prevNodes = [] #nodes in the previous layer
+    connections = [] 
     def __init__(self,prevNodes,nodes):
         self.nodes = nodes
         self.prevNodes = prevNodes
@@ -140,7 +141,7 @@ def delCrime(city,crime):
             del mnode[city.crimes[crime]]
         city.crimes[crime].__del__()
 
-cities = {}
+
 
 def createNetwork():
     name = input("Enter city name:")
@@ -173,3 +174,6 @@ def learn(city):
         city.adjust()
         s = s.deadline()
     f.close()
+    
+    
+ 

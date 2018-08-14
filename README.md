@@ -1,8 +1,7 @@
 
 # CrimePrediction
 
-I am S.Balasubramanian.
-I am persuing B.E. Computer Science Engineering in Veltech MultiTech Dr.Rangarajan Dr.Sakunthala Engeneering College.
+I am Bala.
 Here  we use Multi layer perceptron for crime prediction.
 This project aims on crime prediction for improving safety of an individual.
 We  have three layers.
